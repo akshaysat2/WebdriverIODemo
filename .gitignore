@@ -1,4 +1,6 @@
 *.war
 .vscode
 *.png
-/node_modules/*
+*.log
+test-output
+node_modules

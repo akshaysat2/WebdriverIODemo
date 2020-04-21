@@ -129,7 +129,10 @@ exports.config = {
     // see also: https://webdriver.io/docs/dot-reporter.html
     reporters: ['spec',
     ['junit', {
-        outputDir: './'
+        outputDir: './test-output',
+        outputFileFormat: function(options) { // optional
+            return `results-${options.cid}.${options.capabilities}.xml`
+        }
         }]
     ],
     port: 4444,
